@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: the-fone-village
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: WHATSAPP_API_KEY
+        sync: false

@@ -2,10 +2,10 @@
   "name": "the-fone-village",
   "version": "1.0.0",
   "description": "E-commerce website for mobile accessories with online payments",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "dev": "nodemon backend/server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",

@@ -1,0 +1,2754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fone Village – Your Mobile Accessories Hub</title>
+
+<meta name="description" content="The Fone Village offers premium mobile accessories including chargers, cables, AirPods, handfrees, and more. Quality products for all your mobile needs.">
+<meta property="og:title" content="The Fone Village – Your Mobile Accessories Hub">
+<meta property="og:description" content="Discover premium mobile accessories at The Fone Village. Chargers, cables, AirPods, handfrees, and more for all your device needs.">
+<meta property="og:image" content="ChatGPT%20Image%20Apr%204,%202026,%2012_13_21%20PM.png">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="ChatGPT%20Image%20Apr%204,%202026,%2012_13_21%20PM.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<style>
+/* ==================== BASE STYLES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-red: #dc143c;
+  --dark-red: #a50f2c;
+  --deep-red: #8b0000;
+  --gold: #ffd700;
+  --dark-bg: #0a0a0a;
+  --card-bg: #1a1a1a;
+  --text-light: #f5f5f5;
+  --text-gray: #b0b0b0;
+  --shadow: rgba(220, 20, 60, 0.3);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--dark-bg);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==================== HERO SECTION ==================== */
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: 0;
+}
+
+.hero-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px;
+  background: rgba(10, 10, 10, 0.55);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: logoFloat 3s ease-in-out infinite;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+}
+
+.hero-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(135deg, #fff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content .tagline {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content .fire-emoji {
+  font-size: 2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.order-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 18px 45px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.order-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.order-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.order-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+.order-btn i {
+  margin-right: 8px;
+}
+
+/* ==================== MENU TOGGLE BUTTON ==================== */
+.menu-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1002;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.6rem;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* ==================== SIDEBAR MENU ==================== */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 320px;
+  background: rgba(26, 26, 26, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 1001;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  padding: 80px 0 30px;
+  overflow-y: auto;
+}
+
+.sidebar-menu.open {
+  transform: translateX(0);
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+.sidebar-menu h4 {
+  color: #764ba2;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 20px 25px;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 15px 30px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-menu a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #667eea, transparent);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.sidebar-menu a:hover::before {
+  width: 100%;
+}
+
+.sidebar-menu a:hover {
+  color: #fff;
+  border-left-color: #764ba2;
+  padding-left: 40px;
+}
+
+/* ==================== SECTIONS ==================== */
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+  border-radius: 2px;
+}
+
+/* ==================== INTRO & OWNERSHIP SECTIONS ==================== */
+.content-box {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+}
+
+.content-box p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  text-align: center;
+}
+
+/* ==================== MENU CATEGORIES ==================== */
+.menu-category-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.menu-category-header .icon-box {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.menu-category-header .icon-box i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* ==================== MENU GRID ==================== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.menu-item {
+  display: block;
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  border: 1px solid rgba(220, 20, 60, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(220, 20, 60, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.menu-item:hover::before {
+  opacity: 1;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 50px rgba(102, 126, 234, 0.4);
+  border-color: #667eea;
+}
+
+.menu-item-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.menu-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-item:hover .menu-item-image img {
+  transform: scale(1.15);
+}
+
+.price-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+.menu-details {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.menu-details h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-light);
+  min-height: 2.5rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.view-details {
+  display: inline-block;
+  margin-top: 10px;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover .view-details {
+  color: #764ba2;
+  transform: translateX(5px);
+}
+
+/* ==================== CART STYLES ==================== */
+#cart {
+  position: fixed;
+  top: 110px;
+  right: 25px;
+  width: 200px;
+  background: rgba(26, 26, 26, 0.98);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  --cart-offset-x: 0px;
+  --cart-offset-y: 0px;
+  transform: translate(var(--cart-offset-x), var(--cart-offset-y)) translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#cart.cart-visible {
+  transform: translate(var(--cart-offset-x), var(--cart-offset-y)) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#cart.dragging {
+  cursor: move;
+  user-select: none;
+}
+
+#cart::-webkit-scrollbar {
+  width: 8px;
+}
+
+#cart::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+#cart::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+#cart h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #764ba2;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 10px;
+  border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+  cursor: move;
+  user-select: none;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cart-header h3 {
+  margin: 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-close {
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.cart-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+}
+
+#cart h3 i.fa-grip-vertical {
+  margin-right: 8px;
+  opacity: 0.6;
+  font-size: 1rem;
+}
+
+#cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+#cart ul li {
+  margin: 15px 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(220, 20, 60, 0.2);
+  transition: all 0.3s ease;
+}
+
+#cart ul li:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
+}
+
+#cart ul li .item-name {
+  font-weight: 600;
+  color: var(--text-light);
+  display: block;
+  margin-bottom: 5px;
+}
+
+#cart ul li .item-price {
+  color: var(--gold);
+  font-weight: 700;
+  float: right;
+}
+
+#cart ul li .customization {
+  color: var(--text-gray);
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 5px;
+  display: block;
+}
+
+#cart ul li button {
+  background: none;
+  color: var(--primary-red);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  float: right;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#cart ul li button:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: scale(1.1);
+}
+
+#cart .total {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid rgba(102, 126, 234, 0.3);
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #764ba2;
+}
+
+#cart .checkout {
+  display: block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+  font-size: 0.95rem;
+}
+
+#cart .checkout:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+}
+
+#cart .empty-cart {
+  text-align: center;
+  color: var(--text-gray);
+  padding: 30px 0;
+  font-style: italic;
+}
+
+/* ==================== CART TOGGLE BUTTON ==================== */
+.cart-toggle-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
+}
+
+.cart-toggle-btn i {
+  position: relative;
+  top: 2px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #dc143c;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+/* ==================== MODAL STYLES ==================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1003;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  animation: slideUp 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-red);
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(220, 20, 60, 0.1);
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #667eea;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.modal-header h3 {
+  text-align: center;
+  color: #764ba2;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.modal-item-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 25px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid rgba(220, 20, 60, 0.2);
+}
+
+.modal-item-details img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.modal-item-info {
+  flex: 1;
+}
+
+.modal-item-info p {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+}
+
+.modal-item-info span {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.4rem;
+}
+
+.modal-description {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border-left: 3px solid #667eea;
+}
+
+.modal-description p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  font-style: italic;
+  margin: 0;
+}
+
+.modal-options {
+  margin-bottom: 30px;
+}
+
+.modal-options > p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-light);
+}
+
+.option-group {
+  margin-bottom: 20px;
+}
+
+.option-group label {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.option-group label:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
+}
+
+.option-group input[type="checkbox"] {
+  margin-right: 12px;
+  accent-color: var(--primary-red);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.option-group label span {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.modal-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #764ba2;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* THANK YOU MODAL STYLES */
+.thank-you-content {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.thank-you-icon {
+  font-size: 4rem;
+  color: #28a745;
+  margin-bottom: 20px;
+  animation: checkmarkBounce 0.6s ease;
+}
+
+@keyframes checkmarkBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.thank-you-content h3 {
+  color: #28a745;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  animation: fadeInText 0.8s ease 0.3s both;
+}
+
+.thank-you-content p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  animation: fadeInText 0.8s ease 0.5s both;
+}
+
+.proceed-btn {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+  animation: fadeInText 0.8s ease 0.7s both;
+}
+
+.proceed-btn:hover {
+  background: linear-gradient(135deg, #128c7e, #25d366);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+}
+
+.proceed-btn i {
+  margin-right: 8px;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PAYMENT MODAL STYLES */
+.payment-modal {
+  max-width: 450px;
+  max-height: 80vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payment-header h3 {
+  color: #764ba2;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.payment-header p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.payment-methods {
+  margin-bottom: 20px;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.payment-method:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.payment-method.selected {
+  background: rgba(102, 126, 234, 0.15);
+  border-color: #667eea;
+}
+
+.payment-method i {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-right: 12px;
+  width: 25px;
+  text-align: center;
+}
+
+.method-info {
+  flex: 1;
+}
+
+.method-info h4 {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.method-info p {
+  color: var(--text-gray);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.method-check {
+  font-size: 1.2rem;
+  color: #667eea;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.payment-method.selected .method-check {
+  opacity: 1;
+}
+
+.payment-actions {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.payment-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.payment-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+}
+
+.payment-btn:disabled {
+  background: var(--text-gray);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Customer Info Form */
+.customer-info-form {
+  margin: 15px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.customer-info-form h4 {
+  color: var(--gold);
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+}
+
+.contact-card i {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.contact-card strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #764ba2;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.contact-card a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: #764ba2;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background: linear-gradient(135deg, #764ba2, var(--dark-bg));
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 80px;
+  border-top: 3px solid #667eea;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+footer .social-links {
+  margin-top: 20px;
+}
+
+footer .social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content .tagline {
+    font-size: 1.3rem;
+  }
+
+  .hero-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .order-btn {
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+
+  section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .menu-category-header {
+    font-size: 1.6rem;
+    margin-top: 50px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+  }
+
+  .sidebar-menu {
+    width: 280px;
+  }
+
+  #cart {
+    width: 280px;
+    right: 15px;
+    top: 100px;
+  }
+
+  .modal-content {
+    padding: 30px 20px;
+  }
+
+  .modal-item-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-item-details img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content .tagline {
+    font-size: 1.1rem;
+  }
+
+  .hero-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #cart {
+    width: calc(100% - 30px);
+    right: 15px;
+    left: 15px;
+  }
+
+  .sidebar-menu {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+}
+
+/* ==================== LOADING ANIMATION ==================== */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ==================== SCROLL TO TOP BUTTON ==================== */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  display: flex;
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* ==================== WELCOME MODAL ==================== */
+.welcome-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.welcome-modal {
+  background: var(--card-bg);
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.welcome-header h2 {
+  margin: 0;
+  color: var(--gold);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.welcome-close {
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.welcome-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+}
+
+.welcome-content {
+  padding: 25px 30px;
+}
+
+.guide-section h3 {
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.guide-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.step-number {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  margin: 0 0 5px 0;
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.step-content p {
+  margin: 0;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+.step-content strong {
+  color: var(--gold);
+}
+
+.payment-methods {
+  margin-bottom: 25px;
+}
+
+.payment-methods h3 {
+  color: var(--gold);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.payment-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.payment-option {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.payment-option i {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.payment-option h4 {
+  margin: 0 0 5px 0;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.payment-option p {
+  margin: 0;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.welcome-notice {
+  background: rgba(220, 20, 60, 0.1);
+  border: 1px solid rgba(220, 20, 60, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.welcome-notice p {
+  margin: 0;
+  color: #ff6b6b;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.welcome-footer {
+  padding: 20px 30px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.welcome-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.welcome-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .welcome-modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .welcome-header {
+    padding: 20px 20px 10px;
+  }
+
+  .welcome-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-content {
+    padding: 20px;
+  }
+
+  .guide-steps {
+    gap: 15px;
+  }
+
+  .step {
+    gap: 12px;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .payment-options {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .welcome-footer {
+    padding: 15px 20px 20px;
+  }
+}
+</style>
+
+<!-- Font Awesome and other scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+
+<!-- WELCOME GUIDE MODAL -->
+<div id="welcomeModal" class="welcome-modal-overlay">
+  <div class="welcome-modal">
+    <div class="welcome-header">
+      <h2>🎉 Welcome to The Fone Village!</h2>
+      <button class="welcome-close" onclick="closeWelcomeModal()">&times;</button>
+    </div>
+    <div class="welcome-content">
+      <div class="guide-section">
+        <h3>📱 How to Place Your Order</h3>
+        <div class="guide-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Browse & Add to Cart</h4>
+              <p>Explore our premium mobile accessories and add items to your cart.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Complete Your Order</h4>
+              <p>Fill in your delivery details and choose your payment method. Cash on delivery orders require a 300 PKR online advance for confirmation and validation.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>WhatsApp Confirmation</h4>
+              <p><strong>Important:</strong> After placing your order, you'll be asked to open WhatsApp with an automated message. <strong>Click "Send"</strong> so we can confirm your order and arrange delivery.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Online Payments</h4>
+              <p>For bank transfers, send the automated WhatsApp message <strong>along with your payment receipt</strong> to confirm your payment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="payment-methods">
+        <h3>💳 Payment Methods</h3>
+        <div class="payment-options">
+          <div class="payment-option">
+            <i class="fas fa-truck"></i>
+            <h4>Cash on Delivery</h4>
+            <p>300 PKR advance online, remaining amount on delivery</p>
+          </div>
+          <div class="payment-option">
+            <i class="fas fa-university"></i>
+            <h4>Bank Transfer</h4>
+            <p>Send payment receipt via WhatsApp</p>
+          </div>
+          <div class="payment-option">
+            <i class="fab fa-whatsapp"></i>
+            <h4>WhatsApp Order</h4>
+            <p>Coordinate payment via WhatsApp</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="welcome-notice">
+        <p><strong>⚠️ Important:</strong> Always send the automated WhatsApp message after placing your order. Cash on delivery orders are only confirmed after a 300 PKR online advance payment for validation.</p>
+      </div>
+    </div>
+    <div class="welcome-footer">
+      <button class="welcome-btn" onclick="closeWelcomeModal()">Got it, Start Shopping!</button>
+    </div>
+  </div>
+</div>
+
+<!-- HERO SECTION -->
+<header>
+  <div class="hero-background"></div>
+  <div class="hero-content" data-aos="zoom-in">
+    <div class="hero-logo">
+      <img src="ChatGPT%20Image%20Apr%204,%202026,%2012_13_21%20PM.png" alt="The Fone Village logo">
+    </div>
+    <h1>The Fone Village</h1>
+    <p class="tagline">
+      <span class="fire-emoji">📱</span>
+      Your Mobile Accessories Hub
+      <span class="fire-emoji">📱</span>
+    </p>
+    <a class="order-btn"
+       href="#menu"
+       onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'});">
+      <i class="fas fa-shopping-bag"></i>Browse Products
+    </a>
+  </div>
+</header>
+
+<!-- MENU TOGGLE BUTTON -->
+<button class="menu-toggle" id="menuToggleBtn" aria-label="Toggle Menu">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- SIDEBAR NAVIGATION -->
+<div class="sidebar-menu" id="sidebarMenu">
+  <h4>Menu Navigation</h4>
+  <a href="#intro" onclick="toggleMenu()"><i class="fas fa-info-circle"></i> Introduction</a>
+  <div id="categoryLinks"></div>
+  <a href="#contact" onclick="toggleMenu()"><i class="fas fa-phone"></i> Contact Us</a>
+</div>
+
+<!-- INTRODUCTION SECTION -->
+<section id="intro" data-aos="fade-up">
+  <h2>Welcome to The Fone Village</h2>
+  <div class="content-box">
+    <p>
+      The Fone Village is your one-stop destination for premium mobile accessories.
+      From high-quality chargers and cables to the latest AirPods and handfrees,
+      we offer everything you need to enhance your mobile experience. Quality products,
+      competitive prices, and excellent customer service - that's our promise.
+    </p>
+  </div>
+</section>
+
+<!-- OUR STORY SECTION -->
+<section id="ownership" data-aos="fade-up">
+  <h2>Our Story</h2>
+  <div class="content-box">
+    <p>
+      Founded with a vision to provide high-quality mobile accessories to everyone,
+      The Fone Village started as a small shop and has grown into a trusted name
+      in mobile accessories. We understand the importance of reliable accessories
+      for your devices, and we're committed to offering only the best products
+      with genuine quality and warranty support.
+    </p>
+  </div>
+</section>
+
+<!-- MENU SECTION -->
+<section id="menu" data-aos="fade-up">
+  <h2>Our Products</h2>
+  <div id="menuContainer"></div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" data-aos="fade-up">
+  <h2>Visit Us</h2>
+  <div class="contact-info">
+    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-map-marker-alt"></i>
+      <strong>Main Store</strong>
+      <p>The Fone Village<br>T F V House<br>Shamas Abad Road<br>Sarai Alamgir</p>
+    </div>
+    <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-phone"></i>
+      <strong>Call Us</strong>
+      <p><a href="tel:+923327775218">0332-7775218</a></p>
+    </div>
+    <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+      <i class="fab fa-instagram"></i>
+      <strong>Follow Us</strong>
+      <p><a href="https://www.instagram.com" target="_blank">@thefonevillage</a></p>
+    </div>
+    <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+      <i class="fab fa-whatsapp"></i>
+      <strong>WhatsApp</strong>
+      <p><a href="https://wa.me/923327775218" target="_blank">0332-7775218</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2024 The Fone Village. All rights reserved.</p>
+  <p>Crafted with <i class="fas fa-heart" style="color: #667eea;"></i> for mobile enthusiasts</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/thefonevillage" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/923327775218" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</footer>
+
+<!-- SHOPPING CART -->
+<div id="cart">
+  <div class="cart-header">
+    <h3><i class="fas fa-shopping-cart"></i> Your Order</h3>
+    <button class="cart-close" onclick="hideCart()" title="Close Cart">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <ul id="cartItems"></ul>
+  <div class="empty-cart" id="emptyCart" style="display: none;">
+    <i class="fas fa-shopping-basket" style="font-size: 3rem; color: var(--text-gray); margin-bottom: 10px;"></i>
+    <p>Your cart is empty</p>
+  </div>
+  <div class="total" id="cartTotal">Total: 0 PKR</div>
+  <button id="checkoutBtn" class="checkout" onclick="showThankYouModal()">
+    <i class="fas fa-credit-card"></i> Checkout
+  </button>
+</div>
+
+<!-- CART TOGGLE BUTTON -->
+<button id="cartToggleBtn" class="cart-toggle-btn">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="cart-count" id="cartCount">0</span>
+</button>
+
+<!-- ITEM MODAL -->
+<div class="modal-overlay" id="itemModal" onclick="if(event.target.id === 'itemModal') closeModal()">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-header">
+      <h3 id="modalItemName">Item Name</h3>
+    </div>
+    <div class="modal-item-details">
+      <img id="modalItemImage" src="" alt="Item">
+      <div class="modal-item-info">
+        <p>Base Price: <span id="modalItemBasePrice"></span> PKR</p>
+      </div>
+    </div>
+
+    <div class="modal-description">
+      <p id="modalItemDescription"></p>
+    </div>
+
+    <div class="modal-footer">
+      <span class="modal-price">Total: <span id="modalItemCurrentPrice">0</span> PKR</span>
+      <button class="add-to-cart-btn" onclick="addItemToCartFromModal()">
+        <i class="fas fa-plus-circle"></i> Add to Order
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- THANK YOU MODAL -->
+<div class="modal-overlay" id="thankYouModal" onclick="if(event.target.id === 'thankYouModal') closeThankYouModal()">
+  <div class="modal-content payment-modal">
+    <span class="modal-close" onclick="closeThankYouModal()">&times;</span>
+    <div class="payment-header">
+      <h3>Complete Your Order</h3>
+      <p>Choose your preferred payment method</p>
+    </div>
+
+    <div class="payment-methods">
+      <div class="payment-method" onclick="selectPaymentMethod('bank')">
+        <i class="fas fa-university"></i>
+        <div class="method-info">
+          <h4>Direct Bank Transfer</h4>
+          <p>Transfer directly to our bank account</p>
+        </div>
+        <div class="method-check" id="bank-check">✓</div>
+      </div>
+
+      <div class="payment-method" onclick="selectPaymentMethod('whatsapp')">
+        <i class="fab fa-whatsapp"></i>
+        <div class="method-info">
+          <h4>WhatsApp Order</h4>
+          <p>Contact us directly for custom orders</p>
+        </div>
+        <div class="method-check" id="whatsapp-check">✓</div>
+      </div>
+
+      <div class="payment-method" onclick="selectPaymentMethod('cod')">
+        <i class="fas fa-hand-holding-usd"></i>
+        <div class="method-info">
+          <h4>Cash on Delivery</h4>
+          <p>300 PKR online advance, rest on delivery</p>
+        </div>
+        <div class="method-check" id="cod-check">✓</div>
+      </div>
+    </div>
+
+    <!-- Customer Information Form (required for all payment methods) -->
+    <div class="customer-info-form" id="customerInfoForm">
+      <h4>Delivery Information</h4>
+      <div class="form-group">
+        <input type="text" id="customerName" placeholder="Full Name" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+      </div>
+      <div class="form-group">
+        <textarea id="customerAddress" placeholder="Delivery Address" rows="3" required></textarea>
+      </div>
+    </div>
+
+    <div class="payment-actions">
+      <button class="payment-btn" id="proceedPaymentBtn" onclick="proceedWithPayment()" disabled>
+        Proceed to Payment
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER SUCCESS MODAL -->
+<div class="modal-overlay" id="orderSuccessModal" onclick="if(event.target.id === 'orderSuccessModal') closeOrderSuccessModal()">
+  <div class="modal-content payment-modal">
+    <span class="modal-close" onclick="closeOrderSuccessModal()">&times;</span>
+    <div class="thank-you-content">
+      <div class="thank-you-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h3 id="orderSuccessTitle">Thanks for your order!</h3>
+      <p id="orderSuccessMessage">Your order has been received successfully.</p>
+      <button class="proceed-btn" id="orderSuccessActionBtn" onclick="handleOrderSuccessAction()">
+        <i class="fab fa-whatsapp"></i> Open WhatsApp Confirmation
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- MAIN JAVASCRIPT -->
+<script>
+// Menu Data with icons
+const menuData = {
+ "Chargers": [
+    {id: 'C001', name: "iPhone Charger (18W)", price: 2500, img: "https://picsum.photos/200/200?random=1", description: "Original Apple 18W USB-C Power Adapter. Fast charging for iPhone 13 and later models. Compact design with foldable plug for easy portability."},
+    {id: 'C002', name: "Samsung Charger (25W)", price: 2200, img: "https://picsum.photos/200/200?random=2", description: "Samsung Super Fast Charging adapter. Compatible with Galaxy S21, S22, and Note series. Delivers up to 25W of power for rapid charging."},
+    {id: 'C003', name: "Universal Charger (22.5W)", price: 1800, img: "https://picsum.photos/200/200?random=3", description: "Multi-device fast charger with USB-C and USB-A ports. Works with iPhone, Samsung, Google Pixel, and other Android devices. PD 3.0 certified."},
+    {id: 'C004', name: "Wireless Charger (10W)", price: 1500, img: "https://picsum.photos/200/200?random=4", description: "Qi-certified wireless charging pad. Compatible with iPhone 8 and later, Samsung Galaxy S6 and later. LED indicator shows charging status."},
+    {id: 'C005', name: "Car Charger (18W)", price: 1200, img: "https://picsum.photos/200/200?random=5", description: "Dual USB car charger for on-the-go charging. 18W total output with intelligent current distribution. Compatible with all USB devices."},
+  ],
+  "Cables": [
+    {id: 'CB001', name: "USB-C to USB-C Cable (1M)", price: 800, img: "https://picsum.photos/200/200?random=6", description: "Premium USB-C to USB-C cable with 100W power delivery. Supports fast charging and data transfer up to 480Mbps. Braided design for durability."},
+    {id: 'CB002', name: "Lightning Cable (1M)", price: 600, img: "https://picsum.photos/200/200?random=7", description: "Original Apple Lightning to USB cable. MFi certified for reliable connection. Supports fast charging and data sync for all iPhone and iPad models."},
+    {id: 'CB003', name: "USB-C to Lightning Cable (1M)", price: 900, img: "https://picsum.photos/200/200?random=8", description: "USB-C to Lightning cable for modern charging. Compatible with USB-C power adapters. Supports fast charging up to 20W for iPhone 8 and later."},
+    {id: 'CB004', name: "Micro USB Cable (1M)", price: 300, img: "https://picsum.photos/200/200?random=9", description: "Universal Micro USB cable for Android devices. Nylon braided for extra durability. Supports charging and data transfer."},
+    {id: 'CB005', name: "Type-C to HDMI Cable (2M)", price: 1500, img: "https://picsum.photos/200/200?random=10", description: "USB-C to HDMI cable for screen mirroring. Supports 4K resolution at 60Hz. Perfect for presentations and media streaming."},
+  ],
+  "AirPods & Earbuds": [
+    {id: 'A001', name: "AirPods Pro (2nd Gen)", price: 18500, img: "https://picsum.photos/200/200?random=11", description: "Apple AirPods Pro with active noise cancellation. Custom high-fidelity drivers and adaptive EQ. Up to 6 hours of listening time with case."},
+    {id: 'A002', name: "AirPods (3rd Gen)", price: 12500, img: "https://picsum.photos/200/200?random=12", description: "Apple AirPods with spatial audio. Adaptive EQ and longer battery life. Sweat and water resistant. Up to 6 hours of listening time."},
+    {id: 'A003', name: "Samsung Galaxy Buds2 Pro", price: 14500, img: "https://picsum.photos/200/200?random=13", description: "Samsung Galaxy Buds2 Pro with active noise cancelling. 360 Audio and intelligent conversation mode. IPX7 water resistance."},
+    {id: 'A004', name: "Sony WF-1000XM4", price: 16500, img: "https://picsum.photos/200/200?random=14", description: "Industry-leading noise canceling earbuds. 30-hour battery life with case. Crystal clear hands-free calling. Quick charge for 60 minutes in 3 minutes."},
+    {id: 'A005', name: "JBL Live Pro 2", price: 8500, img: "https://picsum.photos/200/200?random=15", description: "True wireless earbuds with JBL Pure Bass Sound. 40 hours total battery life. Google Fast Pair and Swift Pair ready."},
+  ],
+  "Handfrees & Headphones": [
+    {id: 'H001', name: "Bluetooth Headphones (Over-Ear)", price: 4500, img: "https://picsum.photos/200/200?random=16", description: "Wireless over-ear headphones with 40mm drivers. 30 hours battery life. Comfortable padded headband. Built-in microphone for calls."},
+    {id: 'H002', name: "Gaming Headset", price: 3800, img: "https://picsum.photos/200/200?random=17", description: "RGB gaming headset with 7.1 surround sound. Noise-canceling microphone. Comfortable for long gaming sessions. Compatible with PC, PS4, Xbox."},
+    {id: 'H003', name: "Sports Earphones", price: 1200, img: "https://picsum.photos/200/200?random=18", description: "Sweat-resistant wireless earphones for sports. Secure fit with ear hooks. 8 hours battery life. Perfect for running and workouts."},
+    {id: 'H004', name: "Wired Headphones", price: 2200, img: "https://picsum.photos/200/200?random=19", description: "High-quality wired headphones with 40mm drivers. 3.5mm jack. Adjustable headband. Includes carry pouch. Great for music and calls."},
+    {id: 'H005', name: "Bluetooth Neckband", price: 1800, img: "https://picsum.photos/200/200?random=20", description: "Wireless neckband headphones with magnetic earbuds. 12 hours battery life. Quick charge technology. Perfect for commuting."},
+  ],
+  "Phone Cases & Covers": [
+    {id: 'PC001', name: "iPhone Silicone Case", price: 800, img: "https://picsum.photos/200/200?random=21", description: "Soft silicone case for iPhone protection. Precise cutouts for all ports and buttons. Available in multiple colors. Shock-absorbent design."},
+    {id: 'PC002', name: "Samsung Galaxy Case", price: 700, img: "https://picsum.photos/200/200?random=22", description: "TPU case for Samsung Galaxy phones. Slim design with raised edges for screen protection. Easy to install and remove."},
+    {id: 'PC003', name: "Leather Wallet Case", price: 1500, img: "https://picsum.photos/200/200?random=23", description: "Premium leather wallet case with card slots. Magnetic closure. Stand function for video viewing. RFID blocking technology."},
+    {id: 'PC004', name: "Clear Phone Case", price: 500, img: "https://picsum.photos/200/200?random=24", description: "Crystal clear TPU case that shows off your phone's design. Anti-yellowing formula. Shock-absorbent and scratch-resistant."},
+    {id: 'PC005', name: "Armored Case", price: 1200, img: "https://picsum.photos/200/200?random=25", description: "Heavy-duty armored case with reinforced corners. Military-grade drop protection. Anti-slip grip. Compatible with wireless charging."},
+  ],
+  "Screen Protectors": [
+    {id: 'SP001', name: "Tempered Glass Screen Protector", price: 400, img: "https://picsum.photos/200/200?random=26", description: "9H hardness tempered glass screen protector. Oleophobic coating. Bubble-free installation. Anti-scratch and anti-fingerprint."},
+    {id: 'SP002', name: "Privacy Screen Protector", price: 600, img: "https://picsum.photos/200/200?random=27", description: "Anti-peeping screen protector with 2-way privacy. Reduces blue light. Tempered glass construction. Perfect for public use."},
+    {id: 'SP003', name: "Matte Screen Protector", price: 350, img: "https://picsum.photos/200/200?random=28", description: "Anti-glare matte screen protector. Reduces fingerprint visibility. Smooth touch experience. Easy to clean."},
+    {id: 'SP004', name: "Camera Lens Protector", price: 200, img: "https://picsum.photos/200/200?random=29", description: "Ultra-thin camera lens protector. 9H hardness. Anti-scratch coating. Maintains camera quality while providing protection."},
+    {id: 'SP005', name: "Full Coverage Screen Protector", price: 500, img: "https://picsum.photos/200/200?random=30", description: "Full screen coverage protector including curved edges. Self-healing technology. Anti-fingerprint and anti-scratch."},
+  ]
+};
+const categoryIcons = {
+  "Chargers": "fa-bolt",
+  "Cables": "fa-plug",
+  "AirPods & Earbuds": "fa-headphones",
+  "Handfrees & Headphones": "fa-headphones-alt",
+  "Phone Cases & Covers": "fa-mobile-alt",
+  "Screen Protectors": "fa-shield-alt"
+};
+
+// Flatten menu for easy lookup
+const allMenuItems = Object.values(menuData).flat().reduce((acc, item) => {
+  acc[item.id] = item;
+  return acc;
+}, {});
+
+const menuContainer = document.getElementById("menuContainer");
+const categoryLinks = document.getElementById("categoryLinks");
+let cart = [];
+let whatsAppURL = '';
+let currentItem = {};
+let orderSuccessAction = null;
+
+// Render Menu
+Object.keys(menuData).forEach((category) => {
+  const categoryId = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  
+  // Add to sidebar
+  const link = document.createElement("a");
+  link.href = `#${categoryId}`;
+  link.innerHTML = `<i class="fas ${categoryIcons[category] || 'fa-utensils'}"></i> ${category}`;
+  link.onclick = toggleMenu;
+  categoryLinks.appendChild(link);
+
+  // Category header
+  const catHeader = document.createElement("h3");
+  catHeader.id = categoryId;
+  catHeader.className = "menu-category-header";
+  catHeader.innerHTML = `
+    <div class="icon-box">
+      <i class="fas ${categoryIcons[category] || 'fa-utensils'}"></i>
+    </div>
+    ${category.toUpperCase()}
+  `;
+  catHeader.setAttribute('data-aos', 'fade-right');
+  menuContainer.appendChild(catHeader);
+
+  // Grid
+  const grid = document.createElement("div");
+  grid.className = "menu-grid";
+  menuContainer.appendChild(grid);
+
+  // Items
+  menuData[category].forEach(m => {
+    const div = document.createElement("div");
+    div.className = "menu-item";
+    div.setAttribute('data-aos', 'fade-up');
+    div.setAttribute('data-item-id', m.id);
+    div.onclick = () => openModal(m.id);
+    div.innerHTML = `
+      <div class="menu-item-image">
+        <img src="${m.img}" alt="${m.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgwIiBoZWlnaHQ9IjI0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWEwYTBhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2RjMTQzYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5vIEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
+        <div class="price-tag">Rs ${m.price}</div>
+      </div>
+      <div class="menu-details">
+        <h4>${m.name}</h4>
+        <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+    `;
+    grid.appendChild(div);
+  });
+});
+
+// Toggle Menu
+function toggleMenu() {
+  document.getElementById('sidebarMenu').classList.toggle('open');
+}
+
+// Modal Functions
+const itemModal = document.getElementById('itemModal');
+const modalName = document.getElementById('modalItemName');
+const modalImage = document.getElementById('modalItemImage');
+const modalBasePrice = document.getElementById('modalItemBasePrice');
+const modalCurrentPrice = document.getElementById('modalItemCurrentPrice');
+const modalDescription = document.getElementById('modalItemDescription');
+
+function openModal(itemId) {
+  const item = allMenuItems[itemId];
+  if (!item) return;
+
+  currentItem = { ...item, customization: [] };
+  
+  // No customization options for mobile accessories
+  
+  // Populate
+  modalName.textContent = item.name;
+  modalImage.src = item.img;
+  modalImage.alt = item.name;
+  modalImage.onerror = function() {
+    this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWEwYTBhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZmlsbD0iI2RjMTQzYyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5vIEltYWdlPC90ZXh0Pjwvc3ZnPg==';
+  };
+  modalBasePrice.textContent = item.price;
+  modalDescription.textContent = item.description || 'High-quality mobile accessory for your device!';
+  
+  updateModalPrice();
+  itemModal.style.display = 'flex';
+}
+
+function closeModal() {
+  itemModal.style.display = 'none';
+}
+
+// Thank You Modal Functions
+function showThankYouModal() {
+  if (cart.length === 0) {
+    showNotification('Your cart is empty!');
+    return;
+  }
+  const thankYouModal = document.getElementById('thankYouModal');
+  thankYouModal.style.display = 'flex';
+}
+
+function closeThankYouModal() {
+  const thankYouModal = document.getElementById('thankYouModal');
+  thankYouModal.style.display = 'none';
+}
+
+function showOrderSuccessModal(title, message, buttonLabel, action) {
+  const successModal = document.getElementById('orderSuccessModal');
+  const successTitle = document.getElementById('orderSuccessTitle');
+  const successMessage = document.getElementById('orderSuccessMessage');
+  const successActionBtn = document.getElementById('orderSuccessActionBtn');
+
+  if (!successModal || !successTitle || !successMessage || !successActionBtn) {
+    if (typeof action === 'function') {
+      action();
+    }
+    return;
+  }
+
+  orderSuccessAction = typeof action === 'function' ? action : null;
+  closeThankYouModal();
+  successTitle.textContent = title;
+  successMessage.textContent = message;
+  successActionBtn.textContent = buttonLabel;
+  successModal.style.display = 'flex';
+}
+
+function closeOrderSuccessModal() {
+  const successModal = document.getElementById('orderSuccessModal');
+  if (successModal) {
+    successModal.style.display = 'none';
+  }
+}
+
+function handleOrderSuccessAction() {
+  if (typeof orderSuccessAction === 'function') {
+    const action = orderSuccessAction;
+    orderSuccessAction = null;
+    action();
+  } else {
+    closeOrderSuccessModal();
+  }
+}
+
+function proceedToWhatsApp() {
+  if (whatsAppURL) {
+    window.open(whatsAppURL, '_blank');
+    // Clear cart after order
+    cart = [];
+    renderCart();
+    closeOrderSuccessModal();
+    closeThankYouModal();
+    showNotification('Order placed successfully!');
+  }
+}
+
+function updateModalPrice() {
+  let newPrice = currentItem.price;
+  let customization = [];
+
+  // For mobile accessories, no customization options that affect price
+  // All customizations are informational only
+
+  currentItem.customPrice = newPrice;
+  currentItem.customization = customization;
+  modalCurrentPrice.textContent = newPrice;
+}
+
+function addItemToCartFromModal() {
+  if (!currentItem.name) return;
+
+  const cartItem = {
+    name: currentItem.name,
+    price: currentItem.customPrice,
+    customization: currentItem.customization
+  };
+
+  cart.push(cartItem);
+  renderCart();
+  closeModal();
+
+  // Show notification
+  showNotification('Item added to cart!');
+}
+
+// Cart Functions
+function renderCart() {
+  const list = document.getElementById("cartItems");
+  const total = document.getElementById("cartTotal");
+  const emptyCart = document.getElementById("emptyCart");
+  
+  list.innerHTML = "";
+  let sum = 0;
+
+  if (cart.length === 0) {
+    emptyCart.style.display = 'block';
+    list.style.display = 'none';
+  } else {
+    emptyCart.style.display = 'none';
+    list.style.display = 'block';
+  }
+
+  cart.forEach((c, i) => {
+    const customizationText = c.customization && c.customization.length > 0
+      ? `<span class="customization">${c.customization.join(', ')}</span>`
+      : '';
+
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <span class="item-name">${c.name}</span>
+      ${customizationText}
+      <span class="item-price">${c.price} PKR</span>
+      <button onclick="removeItem(${i})" title="Remove">
+        <i class="fas fa-times"></i>
+      </button>
+    `;
+    list.appendChild(li);
+    sum += c.price;
+  });
+
+  total.textContent = `Total: ${sum} PKR`;
+
+  const orderList = cart.map(c => {
+    let line = `- ${c.name} (${c.price} PKR)`;
+    if (c.customization && c.customization.length > 0) {
+      line += ` [${c.customization.join(', ')}]`;
+    }
+    return line;
+  }).join("%0A");
+
+  whatsAppURL = `https://api.whatsapp.com/send?phone=923327775218&text=Hi%20The%20Fone%20Village,%20I%20want%20to%20place%20an%20order:%0A%0A${orderList}%0A%0ATotal:%20${sum}%20PKR%0A%0APlease%20confirm%20my%20order.`;
+
+  // Update cart count
+  updateCartCount();
+}
+
+function updateCartCount() {
+  const cartCount = document.getElementById('cartCount');
+  cartCount.textContent = cart.length;
+}
+
+function removeItem(i) {
+  cart.splice(i, 1);
+  renderCart();
+  showNotification('Item removed from cart');
+}
+
+// Cart Toggle Functionality
+function toggleCart() {
+  const cartElement = document.getElementById('cart');
+  if (!cartElement) {
+    return;
+  }
+
+  cartElement.classList.toggle('cart-visible');
+}
+
+function hideCart() {
+  const cart = document.getElementById('cart');
+  if (cart) {
+    cart.classList.remove('cart-visible');
+  }
+}
+
+function closeWelcomeModal() {
+  const welcomeModal = document.getElementById('welcomeModal');
+  if (!welcomeModal) {
+    return;
+  }
+
+  welcomeModal.style.display = 'none';
+}
+
+// Initialize cart toggle button
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggleBtn = document.getElementById('menuToggleBtn');
+  const sidebarMenu = document.getElementById('sidebarMenu');
+  const cartToggleBtn = document.getElementById('cartToggleBtn');
+  const cartElement = document.getElementById('cart');
+  const welcomeModal = document.getElementById('welcomeModal');
+
+  renderCart();
+
+  if (cartElement) {
+    keepCartInViewport(cartElement);
+  }
+
+  if (menuToggleBtn) {
+    menuToggleBtn.addEventListener('click', function(event) {
+      event.stopPropagation();
+      toggleMenu();
+    });
+  }
+
+  if (cartToggleBtn) {
+    cartToggleBtn.addEventListener('click', function(event) {
+      event.stopPropagation();
+      toggleCart();
+    });
+  }
+
+  if (sidebarMenu && menuToggleBtn) {
+    document.addEventListener('click', function(event) {
+      if (!sidebarMenu.classList.contains('open')) {
+        return;
+      }
+
+      if (!sidebarMenu.contains(event.target) && !menuToggleBtn.contains(event.target)) {
+        sidebarMenu.classList.remove('open');
+      }
+    });
+  }
+
+  // Hide cart when clicking outside on mobile
+  document.addEventListener('click', function(event) {
+    if (window.innerWidth > 768 || !cartElement || !cartToggleBtn) {
+      return;
+    }
+
+    if (!cartElement.contains(event.target) && !cartToggleBtn.contains(event.target)) {
+      hideCart();
+    }
+  });
+
+  // ==================== WELCOME MODAL FUNCTIONALITY ====================
+  // Show welcome modal on page load
+  if (welcomeModal) {
+    setTimeout(() => {
+      welcomeModal.style.display = 'flex';
+    }, 800);
+
+    // Close modal when clicking outside
+    welcomeModal.addEventListener('click', function(event) {
+      if (event.target === welcomeModal) {
+        closeWelcomeModal();
+      }
+    });
+  }
+});
+
+// ==================== DRAGGABLE CART FUNCTIONALITY ====================
+(function() {
+  try {
+    const cartElement = document.getElementById('cart');
+    if (!cartElement) return;
+    
+    const cartHeader = cartElement.querySelector('h3');
+    if (!cartHeader) return;
+    
+    let isDragging = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    // Load saved position from localStorage
+    try {
+      const savedPosition = localStorage.getItem('cartPosition');
+      if (savedPosition) {
+        const { x, y } = JSON.parse(savedPosition);
+        xOffset = Number.isFinite(x) ? x : 0;
+        yOffset = Number.isFinite(y) ? y : 0;
+        ({ x: xOffset, y: yOffset } = clampCartOffset(xOffset, yOffset));
+        setTranslate(xOffset, yOffset, cartElement);
+      }
+    } catch (err) {
+      console.log('Could not load saved cart position');
+    }
+
+    keepCartInViewport(cartElement);
+
+    cartHeader.addEventListener('mousedown', dragStart);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', dragEnd);
+    window.addEventListener('resize', function() {
+      keepCartInViewport(cartElement);
+    });
+
+    // Touch events for mobile
+    cartHeader.addEventListener('touchstart', dragStart, { passive: false });
+    document.addEventListener('touchmove', drag, { passive: false });
+    document.addEventListener('touchend', dragEnd);
+
+    function dragStart(e) {
+      if (e.type === 'touchstart') {
+        initialX = e.touches[0].clientX - xOffset;
+        initialY = e.touches[0].clientY - yOffset;
+      } else {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+      }
+
+      if (e.target === cartHeader || cartHeader.contains(e.target)) {
+        isDragging = true;
+        cartElement.classList.add('dragging');
+      }
+    }
+
+    function drag(e) {
+      if (isDragging) {
+        e.preventDefault();
+
+        if (e.type === 'touchmove') {
+          currentX = e.touches[0].clientX - initialX;
+          currentY = e.touches[0].clientY - initialY;
+        } else {
+          currentX = e.clientX - initialX;
+          currentY = e.clientY - initialY;
+        }
+
+        ({ x: xOffset, y: yOffset } = clampCartOffset(currentX, currentY));
+
+        setTranslate(xOffset, yOffset, cartElement);
+      }
+    }
+
+    function dragEnd(e) {
+      if (isDragging) {
+        initialX = currentX;
+        initialY = currentY;
+        isDragging = false;
+        cartElement.classList.remove('dragging');
+
+        // Save position to localStorage
+        try {
+          localStorage.setItem('cartPosition', JSON.stringify({
+            x: xOffset,
+            y: yOffset
+          }));
+        } catch (err) {
+          console.log('Could not save cart position');
+        }
+      }
+    }
+
+    function setTranslate(xPos, yPos, el) {
+      el.style.setProperty('--cart-offset-x', `${xPos}px`);
+      el.style.setProperty('--cart-offset-y', `${yPos}px`);
+    }
+
+    function clampCartOffset(xPos, yPos) {
+      const cartWidth = cartElement.offsetWidth || 280;
+      const cartHeight = cartElement.offsetHeight || 320;
+      const minX = -(window.innerWidth - cartWidth - 25);
+      const maxX = 25;
+      const minY = -85;
+      const maxY = Math.max(20, window.innerHeight - cartHeight - 25);
+
+      return {
+        x: Math.min(maxX, Math.max(minX, xPos)),
+        y: Math.min(maxY, Math.max(minY, yPos))
+      };
+    }
+  } catch (error) {
+    console.error('Error initializing draggable cart:', error);
+  }
+})();
+
+function keepCartInViewport(cartElement) {
+  const savedX = parseFloat(getComputedStyle(cartElement).getPropertyValue('--cart-offset-x')) || 0;
+  const savedY = parseFloat(getComputedStyle(cartElement).getPropertyValue('--cart-offset-y')) || 0;
+  const cartWidth = cartElement.offsetWidth || 280;
+  const cartHeight = cartElement.offsetHeight || 320;
+  const minX = -(window.innerWidth - cartWidth - 25);
+  const maxX = 25;
+  const minY = -85;
+  const maxY = Math.max(20, window.innerHeight - cartHeight - 25);
+  const nextX = Math.min(maxX, Math.max(minX, savedX));
+  const nextY = Math.min(maxY, Math.max(minY, savedY));
+
+  cartElement.style.setProperty('--cart-offset-x', `${nextX}px`);
+  cartElement.style.setProperty('--cart-offset-y', `${nextY}px`);
+
+  try {
+    localStorage.setItem('cartPosition', JSON.stringify({ x: nextX, y: nextY }));
+  } catch (error) {
+    console.warn('Could not normalize cart position:', error);
+  }
+}
+
+// Notification Function
+function showNotification(message) {
+  const notification = document.createElement('div');
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px var(--shadow);
+    z-index: 10000;
+    font-weight: 600;
+    animation: slideDown 0.3s ease;
+  `;
+  notification.textContent = message;
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    notification.style.animation = 'slideUp 0.3s ease';
+    setTimeout(() => notification.remove(), 300);
+  }, 2000);
+}
+
+// Scroll to Top
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// ==================== PAYMENT SYSTEM ====================
+let selectedPaymentMethod = null;
+
+function selectPaymentMethod(method) {
+  selectedPaymentMethod = method;
+
+  // Remove selected class from all methods
+  document.querySelectorAll('.payment-method').forEach(el => {
+    el.classList.remove('selected');
+  });
+
+  // Add selected class to clicked method
+  document.getElementById(method + '-check').parentElement.classList.add('selected');
+
+  // Check if all required fields are filled to enable proceed button
+  checkFormCompletion();
+}
+
+// Function to check if all required form fields are completed
+function checkFormCompletion() {
+  const customerName = document.getElementById('customerName').value.trim();
+  const customerPhone = document.getElementById('customerPhone').value.trim();
+  const customerAddress = document.getElementById('customerAddress').value.trim();
+  const proceedBtn = document.getElementById('proceedPaymentBtn');
+
+  // Enable proceed button only if payment method is selected AND all customer fields are filled
+  const isFormComplete = selectedPaymentMethod && customerName && customerPhone && customerAddress;
+  proceedBtn.disabled = !isFormComplete;
+}
+
+// Add event listeners to form inputs to check completion on input
+document.getElementById('customerName').addEventListener('input', checkFormCompletion);
+document.getElementById('customerPhone').addEventListener('input', checkFormCompletion);
+document.getElementById('customerAddress').addEventListener('input', checkFormCompletion);
+
+async function proceedWithPayment() {
+  if (!selectedPaymentMethod) {
+    showNotification('Please select a payment method');
+    return;
+  }
+
+  // Collect customer information for all payment methods
+  const customerName = document.getElementById('customerName').value.trim();
+  const customerPhone = document.getElementById('customerPhone').value.trim();
+  const customerAddress = document.getElementById('customerAddress').value.trim();
+
+  // Validate required fields
+  if (!customerName || !customerPhone || !customerAddress) {
+    showNotification('Please fill in all delivery information fields');
+    return;
+  }
+
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  // Prepare order data for backend
+  const orderData = {
+    items: cart,
+    total: total,
+    customerInfo: {
+      name: customerName,
+      phone: customerPhone,
+      address: customerAddress
+    },
+    paymentMethod: selectedPaymentMethod
+  };
+
+  // Send order to backend
+  sendOrderToBackend(orderData);
+
+  if (selectedPaymentMethod === 'bank') {
+    showBankTransferInfo(total, customerName, customerPhone, customerAddress);
+  } else if (selectedPaymentMethod === 'whatsapp') {
+    updateWhatsAppURLForOrder(total, customerName, customerPhone, customerAddress);
+    showOrderSuccessModal(
+      'Thanks for your order!',
+      'Your order details are ready. Open WhatsApp to send the confirmation message and complete the process.',
+      'Open WhatsApp Confirmation',
+      proceedToWhatsApp
+    );
+  } else if (selectedPaymentMethod === 'cod') {
+    proceedWithCOD(total, customerName, customerPhone, customerAddress);
+  }
+}
+
+function proceedWithCOD(amount, customerName, customerPhone, customerAddress) {
+  // Update WhatsApp URL with customer details for COD
+  const orderList = cart.map(c => {
+    let line = `- ${c.name} (${c.price} PKR)`;
+    if (c.customization && c.customization.length > 0) {
+      line += ` [${c.customization.join(', ')}]`;
+    }
+    return line;
+  }).join("%0A");
+
+  whatsAppURL = `https://api.whatsapp.com/send?phone=923327775218&text=Hi%20The%20Fone%20Village,%20I%20have%20placed%20a%20COD%20order:%0A%0A${orderList}%0A%0ATotal:%20${amount}%20PKR%0A%0A*Delivery%20Details:*%0AName:%20${encodeURIComponent(customerName)}%0APhone:%20${encodeURIComponent(customerPhone)}%0AAddress:%20${encodeURIComponent(customerAddress)}%0A%0APayment%20Method:%20Cash%20on%20Delivery%0AAdvance%20Required:%20300%20PKR%20online%20for%20confirmation%20and%20validation%0A%0APlease%20arrange%20advance%20payment%20confirmation%20and%20delivery.`;
+
+  showOrderSuccessModal(
+    'Thanks for your order!',
+    `Your cash on delivery order for ${amount} PKR needs a 300 PKR online advance for confirmation and validation. Open WhatsApp now to continue.`,
+    'Open WhatsApp Confirmation',
+    proceedToWhatsApp
+  );
+}
+
+// Function to send order data to backend
+async function sendOrderToBackend(orderData) {
+  try {
+    const response = await fetch('/confirm-order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(orderData)
+    });
+
+    const result = await response.json();
+    console.log('Order confirmation result:', result);
+
+    if (!result.success) {
+      showNotification('Order failed. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error sending order:', error);
+    showNotification('Network error. Please check your connection.');
+  }
+}
+
+function showBankTransferInfo(amount, customerName, customerPhone, customerAddress) {
+  // Update WhatsApp URL with customer details for bank transfer
+  const orderList = cart.map(c => {
+    let line = `- ${c.name} (${c.price} PKR)`;
+    if (c.customization && c.customization.length > 0) {
+      line += ` [${c.customization.join(', ')}]`;
+    }
+    return line;
+  }).join("%0A");
+
+  whatsAppURL = `https://api.whatsapp.com/send?phone=923327775218&text=Hi%20The%20Fone%20Village,%20I%20have%20completed%20bank%20transfer%20for%20my%20order:%0A%0A${orderList}%0A%0ATotal:%20${amount}%20PKR%0A%0A*Delivery%20Details:*%0AName:%20${encodeURIComponent(customerName)}%0APhone:%20${encodeURIComponent(customerPhone)}%0AAddress:%20${encodeURIComponent(customerAddress)}%0A%0APayment%20Method:%20Bank%20Transfer%0A%0APlease%20confirm%20receipt%20and%20arrange%20delivery.`;
+
+  showOrderSuccessModal(
+    'Bank transfer selected',
+    `Please complete your bank transfer for ${amount} PKR, then open WhatsApp and send your receipt so we can confirm the order.`,
+    'Open WhatsApp Confirmation',
+    proceedToWhatsApp
+  );
+}
+
+// Function to update WhatsApp URL for WhatsApp orders
+function updateWhatsAppURLForOrder(amount, customerName, customerPhone, customerAddress) {
+  const orderList = cart.map(c => {
+    let line = `- ${c.name} (${c.price} PKR)`;
+    if (c.customization && c.customization.length > 0) {
+      line += ` [${c.customization.join(', ')}]`;
+    }
+    return line;
+  }).join("%0A");
+
+  whatsAppURL = `https://api.whatsapp.com/send?phone=923327775218&text=Hi%20The%20Fone%20Village,%20I%20want%20to%20place%20an%20order:%0A%0A${orderList}%0A%0ATotal:%20${amount}%20PKR%0A%0A*Delivery%20Details:*%0AName:%20${encodeURIComponent(customerName)}%0APhone:%20${encodeURIComponent(customerPhone)}%0AAddress:%20${encodeURIComponent(customerAddress)}%0A%0APayment%20Method:%20WhatsApp%20Order%0A%0APlease%20confirm%20my%20order%20and%20delivery%20details.`;
+}
+
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true,
+  mirror: false
+});
+</script>
+
+</body>
+</html>
